@@ -1,0 +1,36 @@
+html {
+    height: 100%;
+}
+
+/* body{
+  background-image: linear-gradient(to bottom, white, #f0ad72 80%,white 200%);
+  background-size: cover;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+} */
+
+
+#particles{
+  position:relative;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%
+
+}
+
+
+
+.Home .lander {
+  padding: 80px 0;
+  text-align: center;
+}
+
+h2 {
+  background-color: grey;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
