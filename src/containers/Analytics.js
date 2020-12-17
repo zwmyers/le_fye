@@ -71,7 +71,7 @@ class SpotifyAuth extends Component {
       '&scope=' +
       encodeURIComponent('user-read-private%20user-top-read%20user-library-read%20user-follow-read') +
       '&redirect_uri=' +
-      encodeURIComponent('http://localhost:3000/analytics-vis');
+      encodeURIComponent('https://lefye.herokuapp.com/analytics-vis');
     window.location = url;
   }
 
