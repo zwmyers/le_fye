@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { CardView } from 'react-card-with-image'
 import './ArtistCard.css'
 import  Phone from "./../images/phone1.svg";
@@ -12,11 +10,11 @@ const App = (props) => {
         {
           id: 1,
           header:  <h1 style={{color:props.color,fontSize:"100%"}}>
-                Loren Ipsum
+                Connect to Spotify
             </h1>,
           description:
             <h1 style={{color:props.color,boxShadow:"red",fontSize:"100%"}}>
-                'dolor sit amet, consectetur adipiscing elit. Sed tempus nunc et tincidunt lobortis. Aliquam placerat, justo sit amet mattis molestie, ipsum nisi congue turpis, in imperdiet nisi nisl sit amet arcu. Donec euismod eu ante quis elementum. Maecenas commodo erat
+                Read your Spotify data, including top artists and top tracks
             </h1>,
           image:
             Phone
@@ -25,22 +23,22 @@ const App = (props) => {
         {
           id: 2,
           header:  <h1 style={{color:props.color,fontSize:"100%"}}>
-                Loren Ipsum
+                Get Recommendations 
             </h1>,
           description:
             <h1 style={{color:props.color,boxShadow:"red",fontSize:"100%"}}>
-                'dolor sit amet, consectetur adipiscing elit. Sed tempus nunc et tincidunt lobortis. Aliquam placerat, justo sit amet mattis molestie, ipsum nisi congue turpis, in imperdiet nisi nisl sit amet arcu. Donec euismod eu ante quis elementum. Maecenas commodo erat
+                Get recommendations tailored to your taste
             </h1>,
           image: Stack
         },
         {
           id: 3,
           header:  <h1 style={{color:props.color,fontSize:"100%"}}>
-                Loren Ipsum
+                Check Back in the Future
             </h1>,
           description:
             <h1 style={{color:props.color,boxShadow:"red",fontSize:"100%"}}>
-                'dolor sit amet, consectetur adipiscing elit. Sed tempus nunc et tincidunt lobortis. Aliquam placerat, justo sit amet mattis molestie, ipsum nisi congue turpis, in imperdiet nisi nisl sit amet arcu. Donec euismod eu ante quis elementum. Maecenas commodo erat
+                This project is in development, check back for future features, possibly including a web player and playlist generator
             </h1>,
           image: Speaker
         }

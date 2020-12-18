@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import "./AboutUs.css";
 import Dots from './sections/dots';
 import Title from './sections/title';
-
+import us from './images/IMG_3014.jpeg'
 class AboutUs extends React.Component {
     render() {
   
@@ -15,8 +15,14 @@ class AboutUs extends React.Component {
             textAlign:"center"
             }}>
             <h1 style={{color: this.props.theme.theme.text,left:"center"}} >About Us</h1>
-            <p style={{color: this.props.theme.theme.text}}>{this.props.subtitle}</p>
-            <div id="particles" style={{position:"absolute"}}>
+            <div className="Jacob" style={{marginTop:"5vh"}}>
+              <h3 style={{color: this.props.theme.theme.text}}>Jacob Somer and Zachary Myers</h3>
+              <img src={us} widht={200} height={200}></img>
+              <p style={{color: this.props.theme.theme.text}}>Jacob and Zachary are Computer Science students at William and Mary.</p>
+              <p style={{color: this.props.theme.theme.text}}>Jacob's Github: https://github.com/jacobsomer</p>
+              <p style={{color: this.props.theme.theme.text}}>Zachary's Github: https://github.com/zwmyers</p>
+            </div>
+            <div id="particles" >
                 <Dots color={this.props.theme}/>
             </div>
           </div>
