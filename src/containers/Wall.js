@@ -182,7 +182,7 @@ class Wall extends React.Component {
             
              
               <div style={{width:'25vw'}}>
-            <Stat info={this.props.theme}/>  
+            <Stat info={this.props.theme} prop={this.props.prop}/>  
             </div>
               <div style={{position:'relative',width:'25vw'}}>
               <Reccomendation info={this.props.theme}/> 

@@ -67,7 +67,7 @@ export default class App extends React.Component {
     return (
       <div>
         <div style={{position: ''}}>
-            <div className="landed" style={{position: 'relative',background:this.props.theme.theme.gradient,width:"100%"}}>
+            <div className="landed" style={{position: 'relative',background:this.props.theme.theme.gradient,width:"100%",height:"120vh"}}>
                 <h1>A N A L Y T I C S</h1>
                 {!this.state.click ? (<button onClick={this.toggleButton}>Get Analytics</button>):(
                     <>
@@ -75,7 +75,7 @@ export default class App extends React.Component {
                         <h3 style={{position:'relative'}}>Welcome, {localStorage.getItem('userDisplayName')}!</h3>
                     </div>
                     <div className="Wall">
-                        <Wall theme={this.props.theme}/>
+                        <Wall theme={this.props.theme} prop={localStorage.getItem('topTracks').split(',')[1]}/>
                     </div>
                     </>
                 )}

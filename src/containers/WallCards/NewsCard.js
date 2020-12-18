@@ -113,7 +113,7 @@ class NewsCard extends React.Component {
               
                     <ListGroup style={{background:this.props.info.theme.body}}>
                       <ListGroup.Item style={{color:this.props.info.theme.body,background:this.props.info.theme.text}} action onClick={() => this.b1()}>
-                       {this.state.image}
+                       {this.props.prop}
                       </ListGroup.Item>
                       <ListGroup.Item style={{color:this.props.info.theme.body,background:this.props.info.theme.text}} action onClick={() => this.b2()}>
                         Link 2
