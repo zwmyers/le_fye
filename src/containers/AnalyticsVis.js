@@ -82,7 +82,7 @@ export default class App extends React.Component {
                 {!this.state.click ? (
                     <Button
                             variant="primary"
-                            style={{color:props.theme.theme.text,outlineColor:"#fff"}}
+                            style={{color:this.props.theme.theme.text,outlineColor:"#fff"}}
                             disabled={this.state.isLoading}
                             onClick={!this.state.isLoading ? this.toggleButton : null}
                         >
