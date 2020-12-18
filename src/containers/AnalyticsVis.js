@@ -75,7 +75,7 @@ export default class App extends React.Component {
                         <h3 style={{position:'relative'}}>Welcome, {localStorage.getItem('userDisplayName')}!</h3>
                     </div>
                     <div className="Wall">
-                        <Wall theme={this.props.theme} prop={localStorage.getItem('topTracks').split(',')[1]}/>
+                        <Wall theme={this.props.theme} track1={localStorage.getItem('topTracks').split(',')[1]} track2={localStorage.getItem('topTracks').split(',')[2]} track3={localStorage.getItem('topTracks').split(',')[3]} track4={localStorage.getItem('topTracks').split(',')[4]} track5={localStorage.getItem('topTracks').split(',')[5]} trackImg1={localStorage.getItem('topTracksImages').split(',')[1]} trackImg2={localStorage.getItem('topTracksImages').split(',')[2]} trackImg3={localStorage.getItem('topTracksImages').split(',')[3]} trackImg4={localStorage.getItem('topTracksImages').split(',')[4]} trackImg5={localStorage.getItem('topTracksImages').split(',')[5]}/>
                     </div>
                     </>
                 )}

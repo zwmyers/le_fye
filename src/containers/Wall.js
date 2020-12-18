@@ -177,7 +177,7 @@ class Wall extends React.Component {
             
            
             
-            <NewsCard info={this.props.theme} prop={this.props.prop}/>
+            <NewsCard info={this.props.theme} track1={this.props.track1} track2={this.props.track2} track3={this.props.track3} track4={this.props.track4} track5={this.props.track5} img1={this.props.trackImg1} img2={this.props.trackImg2} img3={this.props.trackImg3} img4={this.props.trackImg4} img5={this.props.trackImg5}/>
             
             
              
