@@ -170,7 +170,7 @@ class Wall extends React.Component {
             <div style={{height:''}}>
             
             
-              <NewsCard/>  
+              <NewsCard info={this.props.theme}/>  
              
               <div style={{width:'25vw'}}>
             <Stat info={this.props.theme}/>  
@@ -202,7 +202,7 @@ class Wall extends React.Component {
             </div>
             
             <div style={{}}>
-              <NewsCard/>    
+              <NewsCard info={this.props.theme}/>    
             </div>
             <div style={{width:'25vw'}}>
             <Stat info={this.props.theme}/>  
