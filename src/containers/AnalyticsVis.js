@@ -2,6 +2,7 @@ import React from 'react';
 import "./AnalyticsVis.css"
 import CNTRLR from './CNTRLR'
 import Wall from './Wall'
+import Button from 'react-bootstrap/Button'
 
 const getCode = async () => {
     let url = window.location.href;
@@ -32,9 +33,11 @@ export default class App extends React.Component {
     constructor(props){
         super(props);
         this.state={
-            click:isClicked
+            click:isClicked,
+            isLoading:false
         };
         this.toggleButton=()=>{
+            this.setState({isLoading:true});
             sendCode()
                 .then(data => {
                     console.log(data)
@@ -63,7 +66,7 @@ export default class App extends React.Component {
                     }
                     localStorage.setItem('recs', recs)
                     localStorage.setItem('recsImages', recsImages)
-                    this.setState({click:true})             
+                    this.setState({click:true})           
                 })                       
                 .catch(error => {
                     console.log(error)
@@ -76,8 +79,21 @@ export default class App extends React.Component {
         <div style={{position: ''}}>
             <div className="landed" style={{position: 'relative',background:this.props.theme.theme.gradient,width:"100%",height:"200vh"}}>
                 <h1>A N A L Y T I C S</h1>
-                {!this.state.click ? (<button onClick={this.toggleButton}>Get Analytics</button>):(
+                {!this.state.click ? (
+                    <Button
+                            variant="primary"
+                            style={{color:props.theme.theme.text,outlineColor:"#fff"}}
+                            disabled={this.state.isLoading}
+                            onClick={!this.state.isLoading ? this.toggleButton : null}
+                        >
+                            {this.state.isLoading ? 'Loading…' : 'Click to load'}
+                        </Button>
+                        
+                   
+                
+                ):(
                     <>
+                    
                     <div className="Welcome">
                         <h3 style={{position:'relative'}}>Welcome, {localStorage.getItem('userDisplayName')}!</h3>
                     </div>

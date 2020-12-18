@@ -66,10 +66,9 @@ class NewsCard extends React.Component {
 
       const popover = (
         <Popover style={{backgroundColor:this.props.info.theme.body}}id="popover-basic">
-          <Popover.Title style={{color:this.props.info.theme.text,backgroundColor:this.props.info.theme.body}} as="h3">Popover right</Popover.Title>
+          <Popover.Title style={{color:this.props.info.theme.text,backgroundColor:this.props.info.theme.body}} as="h3">Top 5</Popover.Title>
           <Popover.Content style={{color:this.props.info.theme.text,backgroundColor:this.props.info.theme.body}}>
-            And here's some <strong>amazing</strong> content. It's very engaging.
-            right?
+            This displays either top 5 artists or tracks
           </Popover.Content>
         </Popover>
       );
