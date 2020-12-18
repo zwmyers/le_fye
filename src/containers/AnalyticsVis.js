@@ -57,9 +57,9 @@ export default class App extends React.Component {
                     localStorage.setItem('topArtistsImages', topArtistsImages)
                     var recs = []
                     var recsImages = []
-                    for(var i = 0; i < data.userData[3].items.tracks.length; i++) {
-                        recs[i] = data.userData[3].items.tracks[i].name
-                        recsImages[i] = data.userData[3].items.tracks[i].album.images[0].url
+                    for(var i = 0; i < data.userData[3].tracks.length; i++) {
+                        recs[i] = data.userData[3].tracks[i].name
+                        recsImages[i] = data.userData[3].tracks[i].album.images[0].url
                     }
                     localStorage.setItem('recs', recs)
                     localStorage.setItem('recsImages', recsImages)
