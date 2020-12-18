@@ -10,10 +10,9 @@ class Reccomendation extends React.Component{
   render() {
     const popover = (
       <Popover style={{backgroundColor:this.props.info.theme.body}}id="popover-basic">
-        <Popover.Title style={{color:this.props.info.theme.text,backgroundColor:this.props.info.theme.body}} as="h3">Popover right</Popover.Title>
+        <Popover.Title style={{color:this.props.info.theme.text,backgroundColor:this.props.info.theme.body}} as="h3">Recommendation</Popover.Title>
         <Popover.Content style={{color:this.props.info.theme.text,backgroundColor:this.props.info.theme.body}}>
-          And here's some <strong>amazing</strong> content. It's very engaging.
-          right?
+          This displays a track recommendation
         </Popover.Content>
       </Popover>
     );

@@ -10,10 +10,9 @@ class Stat extends React.Component{
   render() {
     const popover = (
       <Popover style={{backgroundColor:this.props.info.theme.body}}id="popover-basic">
-        <Popover.Title style={{color:this.props.info.theme.text,backgroundColor:this.props.info.theme.body}} as="h3">Popover right</Popover.Title>
+        <Popover.Title style={{color:this.props.info.theme.text,backgroundColor:this.props.info.theme.body}} as="h3">Stat</Popover.Title>
         <Popover.Content style={{color:this.props.info.theme.text,backgroundColor:this.props.info.theme.body}}>
-          And here's some <strong>amazing</strong> content. It's very engaging.
-          right?
+          This displays some statistic
         </Popover.Content>
       </Popover>
     );
@@ -29,7 +28,7 @@ class Stat extends React.Component{
         </style>
       
     {(this.props.info.theme===themes.dark || this.props.info.theme===themes.dark1 || this.props.info.theme===themes.dark2 )?(<ProgressBar style={{background:'white'}} striped variant="" animated now={45} />):
-       (<ProgressBar style={{background:'black'}} striped variant="" animated now={45} />)}
+       (<ProgressBar style={{background:'black'}} striped variant="" animated now={this.props.stat} />)}
        
         
       
@@ -38,11 +37,10 @@ class Stat extends React.Component{
     
         
         <Card.Body>
-          <Card.Title style={{color:this.props.info.theme.body}}>Card Title</Card.Title>
+        <Card.Title style={{color:this.props.info.theme.body}}>{this.props.statType}</Card.Title>
           <Card.Text >
             <div style={{color:this.props.info.theme.body}} >
-              Some quick example text to build on the card title and make up the bulk of
-              the card's content.
+              {this.props.statText}
             </div>
           </Card.Text>
         </Card.Body>

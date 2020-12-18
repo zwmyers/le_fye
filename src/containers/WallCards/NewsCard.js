@@ -9,10 +9,9 @@ import CardColumns from 'react-bootstrap/CardColumns'
 
 const popover = (
   <Popover id="popover-basic">
-    <Popover.Title as="h3">Popover right</Popover.Title>
+    <Popover.Title as="h3">Top 5</Popover.Title>
     <Popover.Content>
-      And here's some <strong>amazing</strong> content. It's very engaging.
-      right?
+      This displays either top 5 artists or top 5 tracks
     </Popover.Content>
   </Popover>
 );

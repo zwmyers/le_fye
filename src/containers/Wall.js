@@ -182,7 +182,7 @@ class Wall extends React.Component {
             
              
               <div style={{width:'25vw'}}>
-            <Stat info={this.props.theme}/>  
+            <Stat info={this.props.theme} stat={this.props.stat1} statType={this.props.statType1} statText={this.props.statText1}/>  
             </div>
               <div style={{position:'relative',width:'25vw'}}>
               <Reccomendation info={this.props.theme} rec={this.props.rec1} recImage={this.props.recImage1}/> 
@@ -194,14 +194,14 @@ class Wall extends React.Component {
           
             <div style={{height:''}}>
             <div style={{width:'25vw'}}>
-            <Stat info={this.props.theme}/>  
+            <Stat info={this.props.theme} stat={45} statType={'Danceability'} statText={'The average dancebaility of the tracks you listen to is 45'}/>  
             </div>
             <div style={{width:'25vw'}}>
               <Reccomendation info={this.props.theme} rec={this.props.rec2} recImage={this.props.recImage2}/>    
             </div>
             </div>   
             <div style={{width:'25vw'}}>
-            <Stat info={this.props.theme}/>  
+            <Stat info={this.props.theme} stat={67} statType={'Time Spent'} statText={'You listen to more music than 64% of users'}/>  
             </div>
             <div style={{width:'25vw'}}>
               <Reccomendation info={this.props.theme} rec={this.props.rec3} recImage={this.props.recImage3}/>    
@@ -211,10 +211,10 @@ class Wall extends React.Component {
             </div>
             
             <div style={{}}>
-              <NewsCard  info={this.props.theme}/>    
+              <NewsCard  info={this.props.theme} track1={this.props.art1} track2={this.props.art2} track3={this.props.art3} track4={this.props.art4} track5={this.props.art5} img1={this.props.artImg1} img2={this.props.artImg2} img3={this.props.artImg3} img4={this.props.artImg4} img5={this.props.artImg5}/>    
             </div>
             <div style={{width:'25vw'}}>
-            <Stat info={this.props.theme}/>  
+            <Stat info={this.props.theme} stat={22} statType={'Discovery'} statText={'You listened to 31% less music this year than last'}/>  
             </div>
            
           </CardColumns>
