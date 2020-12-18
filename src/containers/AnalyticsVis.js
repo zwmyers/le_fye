@@ -75,7 +75,7 @@ export default class App extends React.Component {
                         <h3 style={{position:'relative'}}>Welcome, {localStorage.getItem('userDisplayName')}!</h3>
                     </div>
                     <div className="Wall">
-                        <Wall />
+                        <Wall theme={this.props.theme}/>
                     </div>
                     </>
                 )}
