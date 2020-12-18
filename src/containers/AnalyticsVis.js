@@ -43,7 +43,7 @@ export default class App extends React.Component {
                     var topTracksImages = []
                     for(var i = 0; i < data.userData[1].items.length; i++) {
                         topTracks[i] = data.userData[1].items[i].name
-                        topTracksImages[i] = data.userData[1].items[i].images[0].url
+                        topTracksImages[i] = data.userData[1].items[i].album.images[0].url
                     }
                     localStorage.setItem('topTracks', topTracks)
                     localStorage.setItem('topTracksImages', topTracksImages)
