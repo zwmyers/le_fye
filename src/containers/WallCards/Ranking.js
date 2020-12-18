@@ -27,7 +27,7 @@ class Stat extends React.Component{
           } `}
         </style>
       
-    {(this.props.info.theme===themes.dark || this.props.info.theme===themes.dark1 || this.props.info.theme===themes.dark2 )?(<ProgressBar style={{background:'white'}} striped variant="" animated now={45} />):
+    {(this.props.info.theme===themes.dark || this.props.info.theme===themes.dark1 || this.props.info.theme===themes.dark2 )?(<ProgressBar style={{background:'white'}} striped variant="" animated now={this.props.stat} />):
        (<ProgressBar style={{background:'black'}} striped variant="" animated now={this.props.stat} />)}
        
         
