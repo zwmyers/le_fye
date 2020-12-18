@@ -55,7 +55,14 @@ export default class App extends React.Component {
                     }
                     localStorage.setItem('topArtists', topArtists)
                     localStorage.setItem('topArtistsImages', topArtistsImages)
-                    
+                    var recs = []
+                    var recsImages = []
+                    for(var i = 0; i < data.userData[3].items.length; i++) {
+                        recs[i] = data.userData[3].items.tracks[i].name
+                        recsImages[i] = data.userData[3].items.tracks[i].album.images[0].url
+                    }
+                    localStorage.setItem('recs', recs)
+                    localStorage.setItem('recsImages', recsImages)
                     this.setState({click:true})             
                 })                       
                 .catch(error => {
@@ -75,7 +82,9 @@ export default class App extends React.Component {
                         <h3 style={{position:'relative'}}>Welcome, {localStorage.getItem('userDisplayName')}!</h3>
                     </div>
                     <div className="Wall">
-                        <Wall theme={this.props.theme} track1={localStorage.getItem('topTracks').split(',')[1]} track2={localStorage.getItem('topTracks').split(',')[2]} track3={localStorage.getItem('topTracks').split(',')[3]} track4={localStorage.getItem('topTracks').split(',')[4]} track5={localStorage.getItem('topTracks').split(',')[5]} trackImg1={localStorage.getItem('topTracksImages').split(',')[1]} trackImg2={localStorage.getItem('topTracksImages').split(',')[2]} trackImg3={localStorage.getItem('topTracksImages').split(',')[3]} trackImg4={localStorage.getItem('topTracksImages').split(',')[4]} trackImg5={localStorage.getItem('topTracksImages').split(',')[5]}/>
+                        <Wall theme={this.props.theme} track1={localStorage.getItem('topTracks').split(',')[1]} track2={localStorage.getItem('topTracks').split(',')[2]} track3={localStorage.getItem('topTracks').split(',')[3]} track4={localStorage.getItem('topTracks').split(',')[4]} track5={localStorage.getItem('topTracks').split(',')[5]} trackImg1={localStorage.getItem('topTracksImages').split(',')[1]} trackImg2={localStorage.getItem('topTracksImages').split(',')[2]} trackImg3={localStorage.getItem('topTracksImages').split(',')[3]} trackImg4={localStorage.getItem('topTracksImages').split(',')[4]} trackImg5={localStorage.getItem('topTracksImages').split(',')[5]}
+                        rec1={localStorage.getItem('recs').split(',')[1]} rec2={localStorage.getItem('recs').split(',')[2]} rec3={localStorage.getItem('recs').split(',')[3]} rec4={localStorage.getItem('recs').split(',')[4]} recImage1={localStorage.getItem('recsImages').split(',')[1]} recImage2={localStorage.getItem('recsImages').split(',')[2]} recImage3={localStorage.getItem('recsImages').split(',')[3]} recImage4={localStorage.getItem('recsImages').split(',')[4]}
+                        />
                     </div>
                     </>
                 )}

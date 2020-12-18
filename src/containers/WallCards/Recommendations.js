@@ -21,13 +21,12 @@ class Reccomendation extends React.Component{
   return(
     <OverlayTrigger trigger="hover" placement="auto" overlay={popover}>
       <Card style={{background:this.props.info.theme.text}} >
-        <Card.Img variant="top" src={Logo} />
+        <Card.Img variant="top" src={this.props.recImage} />
         <Card.Body>
-          <Card.Title style={{color:this.props.info.theme.body}}>Card Title</Card.Title>
+          <Card.Title style={{color:this.props.info.theme.body}}>Track Recommendation</Card.Title>
           <Card.Text >
             <div style={{color:this.props.info.theme.body}} >
-              Some quick example text to build on the card title and make up the bulk of
-              the card's content.
+              {this.props.rec}
             </div>
           </Card.Text>
         </Card.Body>

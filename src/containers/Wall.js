@@ -185,7 +185,7 @@ class Wall extends React.Component {
             <Stat info={this.props.theme}/>  
             </div>
               <div style={{position:'relative',width:'25vw'}}>
-              <Reccomendation info={this.props.theme}/> 
+              <Reccomendation info={this.props.theme} rec={this.props.rec1} recImage={this.props.recImage1}/> 
             
             </div>  
   
@@ -197,17 +197,17 @@ class Wall extends React.Component {
             <Stat info={this.props.theme}/>  
             </div>
             <div style={{width:'25vw'}}>
-              <Reccomendation info={this.props.theme}/>    
+              <Reccomendation info={this.props.theme} rec={this.props.rec2} recImage={this.props.recImage2}/>    
             </div>
             </div>   
             <div style={{width:'25vw'}}>
             <Stat info={this.props.theme}/>  
             </div>
             <div style={{width:'25vw'}}>
-              <Reccomendation info={this.props.theme}/>    
+              <Reccomendation info={this.props.theme} rec={this.props.rec3} recImage={this.props.recImage3}/>    
             </div>
             <div style={{width:'25vw'}}>
-              <Reccomendation info={this.props.theme}/>    
+              <Reccomendation info={this.props.theme} rec={this.props.rec4} recImage={this.props.recImage4}/>    
             </div>
             
             <div style={{}}>
