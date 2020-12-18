@@ -1,6 +1,7 @@
 import React from 'react';
 import "./AnalyticsVis.css"
 import CNTRLR from './CNTRLR'
+import Wall from './Wall'
 
 const getCode = async () => {
     let url = window.location.href;
@@ -39,15 +40,22 @@ export default class App extends React.Component {
                     console.log(data)
                     localStorage.setItem('userDisplayName', data.userData[0].display_name)
                     var topTracks = []
+                    var topTracksImages = []
                     for(var i = 0; i < data.userData[1].items.length; i++) {
                         topTracks[i] = data.userData[1].items[i].name
+                        topTracksImages[i] = data.userData[1].items[i].images[0].url
                     }
                     localStorage.setItem('topTracks', topTracks)
+                    localStorage.setItem('topTracksImages', topTracksImages)
                     var topArtists = []
+                    var topArtistsImages = []
                     for(var i = 0; i < data.userData[2].items.length; i++) {
                         topArtists[i] = data.userData[2].items[i].name
+                        topArtistsImages[i] = data.userData[2].items[i].images[0].url
                     }
                     localStorage.setItem('topArtists', topArtists)
+                    localStorage.setItem('topArtistsImages', topArtistsImages)
+                    
                     this.setState({click:true})             
                 })                       
                 .catch(error => {
@@ -62,9 +70,14 @@ export default class App extends React.Component {
             <div className="landed" style={{position: 'relative',background:this.props.theme.theme.gradient,width:"100%"}}>
                 <h1>A N A L Y T I C S</h1>
                 {!this.state.click ? (<button onClick={this.toggleButton}>Get Analytics</button>):(
-                    <div className="data">
+                    <>
+                    <div className="Welcome">
                         <h3 style={{position:'relative'}}>Welcome, {localStorage.getItem('userDisplayName')}!</h3>
                     </div>
+                    <div className="Wall">
+                        <Wall />
+                    </div>
+                    </>
                 )}
             </div>
         </div>
